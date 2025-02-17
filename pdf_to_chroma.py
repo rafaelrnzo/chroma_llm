@@ -22,7 +22,7 @@ if not os.path.exists(file_path):
 
 loader = PyPDFLoader(file_path)
 document = loader.load()
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=200)
 chunked_documents = text_splitter.split_documents(document)
 
 Chroma.from_documents(
